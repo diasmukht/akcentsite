@@ -1,15 +1,15 @@
 import os
 from pathlib import Path
-import dj_database_url  # ← для Railway (будет использоваться позже)
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# ✅ БЕЗОПАСНОСТЬ
+
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-jd4+!r_#7w2yl2v^zk^r$*v)_hyfwzy1u5rn7o^ju4@&26n1^&')
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = ['*']  # временно, Railway подставит свой хост
+ALLOWED_HOSTS = ['*']
 
-# ✅ ПРИЛОЖЕНИЯ
+
 INSTALLED_APPS = [
     'main',
     'django.contrib.admin',
@@ -34,7 +34,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'akcentsite.urls'
 
-# ✅ TEMPLATES
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -52,13 +52,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'akcentsite.wsgi.application'
 
-# ✅ БАЗА ДАННЫХ
-# По умолчанию SQLite (безопасно для деплоя), PostgreSQL подключается позже через Railway
+
 DATABASES = {
     'default': dj_database_url.config(default=f'sqlite:///{BASE_DIR / "db.sqlite3"}')
 }
 
-# ✅ ВАЛИДАЦИЯ ПАРОЛЯ
+
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -66,17 +65,17 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# ✅ ЯЗЫК И ВРЕМЯ
 LANGUAGE_CODE = 'ru'
 TIME_ZONE = 'Asia/Almaty'
 USE_I18N = True
 USE_TZ = True
 
-# ✅ СТАТИКА
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # нужно для Railway
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# ✅ АВТО ID
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'main.CustomUser'
