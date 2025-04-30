@@ -2,7 +2,13 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm
 from django.contrib import messages
+
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404
+
+from .models import Course
+
+
 # from django.core.management import call_command
 # from django.http import HttpResponse
 def index(request):
@@ -90,7 +96,23 @@ def upgrade_view(request):
     return render(request, 'upgrade.html')
 
 
+def course_list(request):
+    courses = Course.objects.all()
+    return render(request, 'courses.html', {'courses': courses})
 
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404
+
+@login_required
+def course_detail(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+
+    # Доступен либо если курс бесплатный, либо пользователь с подпиской
+    if course.is_free or getattr(request.user, 'status', 'regular') == 'advanced':
+        return render(request, 'course_detail.html', {'course': course})
+
+    # Иначе перенаправим на шаблон блокировки
+    return render(request, 'course_locked.html', {'course': course})
 
 
 
@@ -102,10 +124,10 @@ def upgrade_view(request):
 
 
 
-# from django.http import HttpResponse
-# from django.core.management import call_command
+from django.http import HttpResponse
+from django.core.management import call_command
 
 
-# def migrate_now(request):
-#     call_command("migrate")
-#     return HttpResponse("✅ Миграции выполнены на сервере.")
+def migrate_now(request):
+    call_command("migrate")
+    return HttpResponse("✅ Миграции выполнены на сервере.")

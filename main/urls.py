@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import profile_view, upgrade_view, logout_view
+from .views import profile_view, upgrade_view, logout_view, course_list, course_detail, migrate_now
 
 # from .views import collectstatic_now
 urlpatterns = [
@@ -17,6 +17,10 @@ urlpatterns = [
     path('testimonial/', views.testimonial, name='testimonial'),
     path('single/', views.single, name='single'),
     path('logout/', logout_view, name='logout'),
-    # path('migrate-now/', migrate_now, name='migrate-now'),
+    path('courses/<int:course_id>/', views.course_detail, name='course_detail'),
+
+    path('courses/', course_list, name='courses'),
+    path('courses/<int:course_id>/', course_detail, name='course_detail'),
+    path('migrate-now/', migrate_now, name='migrate-now'),
     # path('collectstatic_now/', collectstatic_now, name='collectstatic'),
 ]

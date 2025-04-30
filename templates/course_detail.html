@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ course.title }}</h2>
+    <p><strong>Язык:</strong> {{ course.language }}</p>
+    <p><strong>Длительность:</strong> {{ course.duration }}</p>
+    <p><strong>Рейтинг:</strong> {{ course.rating }}</p>
+
+    <div class="ratio ratio-16x9">
+        <iframe src="{{ course.video_url }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+{% endblock %}
