@@ -8,8 +8,12 @@ from .forms import CustomUserCreationForm
 
 # from django.core.management import call_command
 # from django.http import HttpResponse
+
+
 def index(request):
-    return render(request, 'index.html')
+    courses = Course.objects.all()[:4]  # или отфильтруй .filter(is_free=True) если нужно
+    return render(request, 'index.html', {'courses': courses})
+
 
 
 
@@ -23,8 +27,6 @@ def contact(request):
     return render(request, 'contact.html')
 
 
-def courses(request):
-    return render(request, 'courses.html')
 
 
 def instructor(request):
