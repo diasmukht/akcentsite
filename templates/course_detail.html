@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container mt-5">
-    <h2>{{ course.title }}</h2>
-    <p><strong>Язык:</strong> {{ course.language }}</p>
-    <p><strong>Длительность:</strong> {{ course.duration }}</p>
-    <p><strong>Рейтинг:</strong> {{ course.rating }}</p>
 
-    <div class="ratio ratio-16x9">
-        <iframe src="{{ course.video_url }}" frameborder="0" allowfullscreen></iframe>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="card shadow-lg border-0 rounded-4 p-4 wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-3 text-primary">{{ course.title }}</h2>
+
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item"><strong>🗣️ Язык:</strong> {{ course.language }}</li>
+                <li class="list-group-item"><strong>⏱️ Длительность:</strong> {{ course.duration }}</li>
+                <li class="list-group-item"><strong>⭐ Рейтинг:</strong> {{ course.rating }}</li>
+                <li class="list-group-item"><strong>💡 Тип курса:</strong>
+                    {% if course.is_free %}
+                        <span class="badge bg-success text-white">ТЕГІН</span>
+                    {% else %}
+                        <span class="badge bg-warning text-dark">АҚЫЛЫ</span>
+                    {% endif %}
+                </li>
+            </ul>
+
+            <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+                <iframe src="{{ course.video_url }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </div>
+
 {% endblock %}

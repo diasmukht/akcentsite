@@ -129,46 +129,52 @@
 
     <!-- Courses Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center px-3">Танымал курстар</h6>
-                <h1 class="mb-5" style="color: #4682B4;">Өзіңізге сай келетін орыс тілі курсын таңдаңыз</h1>
-            </div>
-            <div class="row g-4 py-2">
-                {% for course in courses %}
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="course-item shadow rounded">
-                            <div class="position-relative overflow-hidden image">
-                                <img class="img-fluid" src="{{ course.image_url }}" alt="{{ course.title }}">
-                                <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:{% if course.is_free %}#0bda51{% else %}#ffcc00{% endif %};"
-                                     class="px-2 py-1 fw-bold text-uppercase text-dark">
-                                    {% if course.is_free %}ТЕГІН{% else %}АҚЫЛЫ{% endif %}
-                                </div>
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center px-3">Танымал курстар</h6>
+            <h1 class="mb-5" style="color: #4682B4;">Өзіңізге сай келетін орыс тілі курсын таңдаңыз</h1>
+        </div>
+        <div class="row g-4 py-2">
+            {% for course in courses %}
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow rounded overflow-hidden h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" style="height: 180px; object-fit: cover;"
+                                 src="{{ course.image_url|default:'/static/img/default.jpg' }}"
+                                 alt="{{ course.title }}">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:{% if course.is_free %}#0bda51{% else %}#ffcc00{% endif %};"
+                                 class="px-2 py-1 fw-bold text-uppercase text-dark shadow-sm">
+                                {% if course.is_free %}ТЕГІН{% else %}АҚЫЛЫ{% endif %}
                             </div>
-                            <div class="p-3 pb-2 bg-white">
-                                <h5 class="mb-2 fw-bold">
-                                    <a href="{% url 'course_detail' course.id %}"
-                                       class="text-dark text-decoration-none">
+                        </div>
+                        <div class="p-3 bg-white d-flex flex-column justify-content-between h-100">
+                            <div>
+                                <h5 class="fw-bold mb-2">
+                                    <a href="{% url 'course_detail' course.id %}" class="text-dark text-decoration-none">
                                         {{ course.title }}
                                     </a>
                                 </h5>
-                                <div class="d-flex flex-wrap justify-content-between small text-muted">
+                                <div class="d-flex justify-content-between small text-muted">
                                     <span><i class="fa fa-language me-1"></i>{{ course.language }}</span>
                                     <span><i class="fa fa-clock me-1"></i>{{ course.duration }}</span>
                                 </div>
-                                <div class="d-flex flex-wrap justify-content-between small mt-2">
-                                    <span><i class="fa fa-star text-warning me-1"></i>{{ course.rating }}</span>
-                                    <a href="{% url 'course_detail' course.id %}" class="text-primary fw-bold">Кіру <i
-                                            class="fa fa-chevron-right me-1"></i></a>
-                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="small"><i class="fa fa-star text-warning me-1"></i>{{ course.rating }}</span>
+                                <a href="{% url 'course_detail' course.id %}" class="btn btn-sm btn-outline-primary">
+                                    Кіру <i class="fa fa-chevron-right small"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                {% endfor %}
-            </div>
-
+                </div>
+            {% empty %}
+                <p class="text-center">Қазір курстар жоқ.</p>
+            {% endfor %}
         </div>
     </div>
+</div>
+
     <div class="container text-center">
         <a class="btn text-light py-3 px-5 mt-2 mb-5" href="{% url 'courses' %}">Барлық курстар</a>
     </div>
