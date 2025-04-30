@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from .views import profile_view, upgrade_view
 
-# from .views import migrate_now
+from .views import collectstatic_now
 urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, name='about'),
@@ -17,4 +17,5 @@ urlpatterns = [
     path('testimonial/', views.testimonial, name='testimonial'),
     path('single/', views.single, name='single'),
     # path('migrate-now/', migrate_now, name='migrate-now'),
+    path('collectstatic_now/', collectstatic_now, name='collectstatic'),
 ]
