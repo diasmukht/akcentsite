@@ -130,10 +130,10 @@ def courses_view(request):
 
 
 
-# from django.http import HttpResponse
-# from django.core.management import call_command
-#
-#
-# def migrate_now(request):
-#     call_command("migrate")
-#     return HttpResponse("✅ Миграции выполнены на сервере.")
+from django.http import HttpResponse
+from django.core.management import call_command
+
+
+def migrate_now(request):
+    call_command("migrate")
+    return HttpResponse("✅ Миграции выполнены на сервере.")

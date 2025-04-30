@@ -17,7 +17,6 @@ class CustomUser(AbstractUser):
         return self.username
 
 
-# models.py
 class Course(models.Model):
     title = models.CharField(max_length=200)
     language = models.CharField(max_length=50)
@@ -25,6 +24,7 @@ class Course(models.Model):
     rating = models.FloatField(default=0)
     duration = models.CharField(max_length=50)  # например, "3 сағ"
     video_url = models.URLField(blank=True, null=True)
+    image_url = models.URLField(blank=True, null=True)  # 🆕 Добавлено
 
     def __str__(self):
         return self.title

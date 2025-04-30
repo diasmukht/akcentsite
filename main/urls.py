@@ -6,6 +6,7 @@ from .views import (
     logout_view,
     course_detail,
     courses_view,
+    migrate_now
 )
 
 urlpatterns = [
@@ -25,6 +26,6 @@ urlpatterns = [
     path('single/', views.single, name='single'),
     path('logout/', logout_view, name='logout'),
 
-    # path('migrate-now/', migrate_now, name='migrate-now'),
+    path('migrate-now/', migrate_now, name='migrate-now'),
     # path('collectstatic_now/', collectstatic_now, name='collectstatic'),
 ]
