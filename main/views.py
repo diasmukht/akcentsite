@@ -3,6 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.management import call_command
+from django.http import HttpResponse
 def index(request):
     return render(request, 'index.html')
 
@@ -94,7 +96,9 @@ def upgrade_view(request):
 
 
 
-
+def collectstatic_now(request):
+    call_command("collectstatic", interactive=False)
+    return HttpResponse("✅ collectstatic выполнен")
 
 
 

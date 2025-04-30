@@ -1,13 +1,14 @@
 import os
 from pathlib import Path
 import dj_database_url
+from django.contrib import staticfiles
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-jd4+!r_#7w2yl2v^zk^r$*v)_hyfwzy1u5rn7o^ju4@&26n1^&')
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.railway.app', 'web-production-99e109.up.railway.app']
 
 
 INSTALLED_APPS = [
@@ -79,3 +80,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'main.CustomUser'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-99e109.up.railway.app',
+]
+
