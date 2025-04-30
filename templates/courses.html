@@ -1,0 +1,386 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Курстар</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Басты бет</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Курстар</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center px-3">КУРС КАТЕГОРИЯЛАРЫ</h6>
+                <h1 class="mb-5" style="color: #4682B4;">Оқығыңыз келетін бағытты таңдаңыз</h1>
+            </div>
+            <div class="row g-2 m-2">
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat1.png' %}" class="img-fluid" alt="categories">
+
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Жалпы орыс тілі</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat2.png' %}" class="img-fluid" alt="categories">
+
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Балаларға арналған орыс тілі</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat3.png' %}" class="img-fluid" alt="categories">
+
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Кәсіби орыс тілі</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat4.png' %}" class="img-fluid" alt="categories">
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Саяхатшыларға арналған орыс тілі</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat5.png' %}" class="img-fluid" alt="categories">
+
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Грамматика және жазу дағдылары</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat6.png' %}" class="img-fluid" alt="categories">
+
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Сөйлеу клубы және практика</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat7.png' %}" class="img-fluid" alt="categories">
+
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Өзіндік оқу үшін</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  text-center">
+                    <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <img src="{% static 'img/cat8.png' %}" class="img-fluid" alt="categories">
+
+                        <h5 class="my-2">
+                            <a href="#" class="text-center">Шетел азаматтарына арналған орыс тілі</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories End -->
+
+
+
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center px-3">Танымал курстар</h6>
+                <h1 class="mb-5" style="color: #4682B4;">Өзіңізге сай келетін орыс тілі курсын таңдаңыз</h1>
+            </div>
+            <div class="row g-4 py-2">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-1.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0bda51;"
+                                 class="px-2 py-1 fw-bold text-uppercase">ТЕГІН
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1"><a href="{% url 'single' %}" class="text-dark">Бастауыштарға арналған орыс тілі</a>
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-2"><i
+                                    class="fa fa-user me-2"></i>Бастауыш</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>120 мин</small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">0 ₸</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Жазылу </a><i
+                                    class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-2.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
+                                 class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1">Жалпы орыс тілі
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                                4.55</small>
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>5.2K+
+                                Оқырмандар
+                            </small>
+                            <small class="flex-fill text-center py-1 px-2"><i
+                                    class="fa fa-user me-2"></i>Бастауыш</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 60 мин
+                            </small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">30000 ₸-ден</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
+                                    href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-3.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
+                                 class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1">Балаларға арналған орыс тілі
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                                4.46</small>
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>76K+
+                                Оқырмандар
+                            </small>
+                            <small class="flex-fill text-center py-1 px-2"><i
+                                    class="fa fa-user me-2"></i>Бастауыш</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 45/60 мин
+                            </small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">30000 ₸-ден</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
+                                    href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-4.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
+                                 class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1">Саяхатшыларға арналған орыс тілі
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                                4.12</small>
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>3.3К+
+                                Оқырмандар
+                            </small>
+                            <small class="flex-fill text-center py-1 px-2"><i
+                                    class="fa fa-user me-2"></i>Орташа</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 60
+                                мин</small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">50000 ₸-ден</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
+                                    href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-5.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
+                                 class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1">Грамматика және жазу дағдылары
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-1"><i class="fa fa-star text-warning me-2"></i>
+                                4.54</small>
+                            <small class="flex-fill text-center py-1 px-1"><i class="fa fa-user-graduate me-2"></i>1.3К+
+                                Оқырмандар
+                            </small>
+                            <small class="flex-fill text-center py-1 px-1"><i
+                                    class="fa fa-user me-2"></i>Орташа</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>16 сағ</small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">5000 ₸-ден</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Сатып
+                                алу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-6.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0bda51;"
+                                 class="px-2 py-1 fw-bold text-uppercase">ТЕГІН
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1">Сөйлеу клубы және практика
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                                4.55</small>
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>3.5К+
+                                Оқырмандар
+                            </small>
+                            <small class="flex-fill text-center py-1 px-2"><i
+                                    class="fa fa-user me-2"></i>Орташа</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>∞ сағ</small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">990₸-ден</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Кіру</a><i
+                                    class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-7.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
+                                 class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1">Шетел азаматтарына арналған орыс тілі
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                                4.53</small>
+                            <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>1К+
+                                Оқырман
+                            </small>
+                            <small class="flex-fill text-center py-1 px-2"><i
+                                    class="fa fa-user me-2"></i>Бастауыш</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 60
+                                мин</small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">50000₸-ден</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
+                                    href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item shadow">
+                        <div class="position-relative overflow-hidden text-light image">
+                            <img class="img-fluid" src="{% static 'img/course-8.jpg' %}" alt="">
+                            <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
+                                 class="px-2 py-1 fw-bold text-uppercase">PAID
+                            </div>
+
+                        </div>
+                        <div class="p-2 pb-0">
+
+                            <h5 class="mb-1">Жұмысқа арналған орыс тілі
+                            </h5>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-center py-1 px-1"><i class="fa fa-star text-warning me-2"></i>
+                                4.64</small>
+                            <small class="flex-fill text-center py-1 px-1"><i class="fa fa-user-graduate me-2"></i>4.4L+
+                                Learners
+                            </small>
+                            <small class="flex-fill text-center py-1 px-1"><i
+                                    class="fa fa-user me-2"></i>Intermediate</small>
+                        </div>
+                        <div class="d-flex">
+                            <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>3.5
+                                Hrs</small>
+                            <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 149</small>
+                            <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container text-center">
+        <a class="btn text-light py-3 px-5 mt-2 mb-5" href="{% url 'courses' %}">All Courses</a>
+    </div>
+    <!-- Courses End -->
+{% endblock %}

@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .tabs ul li {
+        list-style-type: none;
+    }
+
+    .tabs ul li a {
+        font-size: 25px;
+        color: #4e4e4e !important;
+        font-weight: 500;
+    }
+
+    .tabs ul li a.active {
+        color: #4682b4 !important;
+    }
+
+    .tabs ul li a:hover {
+        color: #4682b4 !important;
+    }
+
+    #more {
+        display: none;
+    }
+
+    button {
+        border: none;
+        color: #4682b4;
+    }
+</style>
+
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">Курстар</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Басты бет</a></li>
+                                <li class="breadcrumb-item"><a class="text-white" href="{% url 'courses' %}">Курс</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Орыс тілі 0-ден бастап</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Header End -->
+
+
+<!-- Course Detail Start -->
+<div class="container-xxl py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 wow fadeInUp">
+
+                <div class="container">
+                    <div class="row g-5 justify-content-center">
+
+                        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
+                            <h2>Орыс тілі 0-ден бастап</h2>
+                            <p>Орыс тілін нөлден бастап үйреніңіз – өзіңізге жаңа мүмкіндік ашыңыз! 🚀
+
+                            </p>
+                            <div class="d-flex">
+                                <small><i class="fa fa-star text-warning"></i>
+                                    4.6</small>
+                                <small style="margin-left: 15px;"><i class="fa fa-user-graduate"></i> 5.8К+
+                                    Оқушылар
+                                </small>
+                                <small style="margin-left: 15px;"><i class="fa fa-user"></i>Бастауыш</small>
+                                <small style="margin-left: 15px;"><i class="fa fa-clock me-2"></i> 1 сабақ 60 минут</small>
+
+                            </div>
+                            <div class="image-div text-left mt-3">
+                                <img src="{% static 'img/testimonial-2.jpg' %}" alt=""
+                                    style="height: 40px; width: 40px; border-radius: 50%;">
+                                <span style="margin-left: 10px;"><b>Бас маман</b> - Мирас Бекназар</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="container-fluid wow fadeInUp mt-5 tabs">
+
+
+                    <!-- Tab panes -->
+                    <div class="tab-content mt-4">
+
+                        <div class="tab-pane container active" id="Overview">
+                            <h2>Курс туралы</h2>
+                            <p> "Орыс тілі нөлден" курсы – орыс тілін үйренуді енді бастағандарға арналған. Бұл жерде сіз еш қиындықсыз, қарапайым сөздерден бастап, еркін сөйлесуге дейін үйренесіз. Сабақтар жеңіл, түсінікті форматта өтеді, және біз бәрін нөлден бастап үйретеміз. Оқу барысында күнделікті өмірде жиі қолданылатын сөздер мен сөйлемдерді меңгеріп, қарапайым диалогтарды құрастыра аласыз.</p>
+
+                           
+                            <h2 class="mt-4">
+                                Сіз не үйренесіз
+                            </h2>
+                            
+                            <span class="badge rounded-pill text-white bg-primary px-4 py-2 m-2"
+                                style="font-size: 15px; font-weight: normal;">Орыс тілінде еркін сөйлей бастайсыз.</span>
+
+                                <span class="badge rounded-pill text-white bg-primary px-4 py-2 m-2"
+                                style="font-size: 15px; font-weight: normal;">Өз ойыңызды дұрыс жеткізе аласыз.</span>
+
+                                <span class="badge rounded-pill text-white bg-primary px-4 py-2 m-2"
+                                style="font-size: 15px; font-weight: normal;">Сенімді қарым-қатынас жасайсыз.</span>
+                           
+
+                        </div>
+
+                        <div class="container" id="Curriculum">
+
+                            <h2 class="mt-4">
+                                Курс кестесі
+                            </h2>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Базалық деңгей
+                                    
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body"><ul>
+                                        <li><i class="fa fa-video text-danger"></i> Орыс тілінің алфавиті, негізгі сөздер мен қарапайым сөйлемдер.
+
+                                        </li>
+                                    </ul></div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Қарым-қатынас негіздері
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body"><ul>
+                                        <li><i class="fa fa-video text-danger"></i> Күнделікті диалогтар, дұрыс айту (произношение), акцентті азайту</li>
+                                    </ul></div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        Грамматика және сөйлем құрастыру
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body"><ul>
+                                        <li><i class="fa fa-video text-danger"></i> Негізгі ережелер, дұрыс сөйлеу құрылымы.</li>
+                                    </ul></div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                          Еркін сөйлеу практикасы
+                                      </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                      <div class="accordion-body"><ul>
+                                          <li><i class="fa fa-video text-danger"></i> Жиі қолданылатын сөз тіркестері, сөйлеу жылдамдығын арттыру.</li>
+                                      </ul></div>
+                                    </div>
+                                  </div>
+                              </div>
+
+
+
+                        </div>
+
+                        <div class="container" id="Instructor">
+                            <h2 class="mt-4">Ұстаз туралы</h2>
+                            <div class="image-div text-left mt-4">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6">
+                                        <img src="{% static 'img/testimonial-2.jpg' %}" alt=""
+                                            style="height: 150px; width: 150px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-lg-9 col-md-6 mt-2">
+                                        <h5>Мирас Бекназар</h5>
+                                        <p>Орыс тілі маманы</p>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p><i class="fa fa-star"></i>
+                                                    4.87 Ұстаз рейтінгі</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p> <i class="fa fa-check
+                                                    
+                                                    
+                                                     "></i>
+                                                    1,533 қаралым</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p><i class="fa fa-user"></i>
+                                                    20000 Оқушы</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="des mt-4 mb-5">
+                                    "Орыс тілі нөлден" курсының әдістемесін әзірлеуші және тіл үйрету бойынша маман. Ол орыс тілін үйренуге арналған бірқатар курстарды дайындады, соның ішінде "Орыс тілі нөлден", "Еркін сөйлеу практикасы" және "Акценттен арылу әдістері".                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-6 shadow wow fadeInUp" data-wow-delay="0.3s">
+
+                <div class="image text-center">
+                    <img class="img-fluid mt-2" src="{% static 'img/course-1.jpg' %}" alt="" height="200px" width="500px">
+                </div>
+                
+                <h4 class="mt-2 p-2">Тегін <small></small></h4>
+                
+                <h4 class="mt-2 p-2">₸
+                    <small><del>60000</del></small>
+                </h4>
+                
+
+                <div class="buttons">
+                    
+                    <a href="#"
+                        class="text-decoration-none text-white btn p-3 w-100 mb-2">ЖАЗЫЛУ</a>
+                    
+                    
+                   
+                </div>
+                <div class="list mt-2">
+                    <div class="list1 d-flex justify-content-between pt-2 border-bottom">
+                        <p><i class="fa fa-clock"></i> Ұзақтығы</p>
+                        <p>1 сабақ 60 минут</p>
+                    </div>
+                    <div class="list2 d-flex justify-content-between pt-2 border-bottom">
+                        <p><i class="fa fa-book"></i> Видеосабақтар</p>
+                        <p>4</p>
+                    </div>
+                    <div class="list3 d-flex justify-content-between pt-2 border-bottom">
+                        <p><i class="fa fa-bolt"></i> Жазылғандар</p>
+                        <p>240 оқушы</p>
+                    </div>
+                    <div class="list4 d-flex justify-content-between pt-2 border-bottom">
+                        <p><i class="fa fa-google-translate"></i> Тілі</p>
+                        <p>Қазақша</p>
+                    </div>
+                    <div class="list5 d-flex justify-content-between pt-2 border-bottom">
+                        <p><i class="fa fa-list"></i> Деңгей</p>
+                        <p>Бастауыш</p>
+                    </div>
+                    <div class="list6 d-flex justify-content-between pt-2 border-bottom">
+                        <p><i class="fa fa-list"></i> Біту уақыты</p>
+                        <p>Шексіз</p>
+                    </div>
+                    <div class="list7 d-flex justify-content-between pt-2 border-bottom">
+                        <p><i class="fa fa-certificate"></i> Сертификат</p>
+                        <p>Бар</p>
+                    </div>
+                    <div class="button pt-4 text-center mb-4">
+                        <i class="fa fa-share"></i><a href="#"> Курспен бөлісу</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Course Detail End -->
+
+
+
+
+{% endblock %}

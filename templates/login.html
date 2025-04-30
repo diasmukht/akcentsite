@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-primary py-5 mb-5 page-header">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">Кіру</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Басты бет</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Кіру</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    
+
+
+    <!-- Login Start -->
+    <div class="container-xxl py-2 mt-4">
+        <div class="container">
+          
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s ">
+                <div style="text-align: center; align-items: center; justify-content: center;">
+                    <form class="shadow p-4" style="max-width: 550px;">
+                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 class="mb-5 bg-white text-center px-3">Кіру</h1>
+            
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" style="border-radius: 10px;" placeholder="Номер">
+                                    <label for="email">Номер</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" id="password" style="border-radius: 10px;" placeholder="Құпиясөз">
+                                    <label for="password">Пароль</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <p><a href="#">Құпиясөзді ұмыттыңыз ба?</a></p>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button class="btn text-light w-100 py-3" type="submit">Кіру</button>
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <p>Аккаунтыңыз жоқ па? <a class="text-decoration-none" href="{% url 'signup' %}">Тіркелу</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+    <!-- Login End -->
+
+
+
+
+{% endblock %}
