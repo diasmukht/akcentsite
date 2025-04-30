@@ -6,447 +6,52 @@
 
 
 
-<!-- Carousel Start -->
-<div class="container-fluid p-0">
-    <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{% static 'img/c1.webp' %}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-75 d-flex align-items-center"
-                 style="background: rgba(35,42,89,0.7);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-sm-10 col-lg-8">
-                            <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #4682B4;">
-                                №1 орыс тілін үйрету орталығы</h5>
-                            <h1 class="display-3 text-white animated slideInDown">Орыс тілін небәрі 8 аптада үйреніңіз</h1>
-                            <p class=" text-white mb-4 pb-2">Байқап көру сабағына қатысып көріңіз, ұнамаса ақшаңызды қайтарып береміз!</p>
-                            <a href="{% url 'about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Толығырақ
-                                білу</a>
-                            <a href="{% url 'signup' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
-                                сабақ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-75 d-flex align-items-center"
-                 style="background: rgba(35,42,89,0.7);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-sm-10 col-lg-8">
-                            <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #4682B4;">TIL.KZ-ге ҚОШ КЕЛДІҢІЗ!
-                            </h5>
-                            <h1 class="display-3 text-white animated slideInDown">Үйренбесеңіз ақшаңызды қайтарамыз!
-                            </h1>
-                            <p class=" text-white mb-4 pb-2">Алдымен біздің методиканы байқап көріңіз – ол үшін тегін сынақ сабағына жазылыңыз!</p>
-                            <a href="{% url 'about' %}"
-                               class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Толығырақ білу </a>
-                            <a href="{% url 'signup' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
-                                сабақ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Carousel End -->
-
-
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-2 text-center">
-            <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                <h1 style="color: #4682B4;"> TIL.KZ-пен өз болашағыңызға инвестиция жасаңыз
-                </h1>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center shadow">
-                    <div class="p-2">
-                        <img src="{% static 'img/icon1.gif' %}" alt="" width="60px" class="mb-2">
-                        <h5 class="mb-3">Кез келген жас</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center shadow">
-                    <div class="p-2">
-                        <img src="{% static 'img/icon1.gif' %}" alt="" width="60px" class="mb-2">
-                        <h5 class="mb-3">Жылдам нәтиже</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center shadow">
-                    <div class="p-2">
-                        <img src="{% static 'img/icon3.gif' %}" alt="" width="60px" class="mb-2">
-                        <h5 class="mb-3">Тәжірибелі мұғалімдер</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center shadow">
-                    <div class="p-2">
-                        <img src="{% static 'img/icon4.gif' %}" alt="" width="60px" class="mb-2">
-                        <h5 class="mb-3">Нәтижеге кепілдік</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Service End -->
-
-<!-- Banner-1 Start -->
-<div class="container-xxl py-5 pt-5 bg-light">
-    <div class="container">
-        <div class="row g-5 ">
-            <div class="col-lg-6 p-5 wow fadeInUp" data-wow-delay="0.3s">
-
-                <h1 class="mb-4" style="color: #4682B4;">ТЕГІН ОҚУ МҮМКІНДІГІ!
-                </h1>
-                <p class="mb-4">Біз сізге қолжетімді білім беруді ұсынамыз, сондықтан алғашқы қадамды жасау үшін
-                    ешқандай төлем қажет емес.</p>
-
-                <a class="btn text-light py-3 px-5 mt-2" href="{% url 'signup' %}">Тегін сабақтар</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Banner-1 End -->
-
-<!-- Courses Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center px-3">Танымал курстар</h6>
-            <h1 class="mb-5" style="color: #4682B4;">Өзіңізге сай келетін орыс тілі курсын таңдаңыз</h1>
-        </div>
-        <div class="row g-4 py-2">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKjGFgdV8uZUZfFG7qm5pRIuKliKUTlYX4ww&s" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0bda51;"
-                             class="px-2 py-1 fw-bold text-uppercase">ТЕГІН
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1"><a href="{% url 'single' %}" class="text-dark">Бастауыштарға арналған орыс тілі</a>
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-2"><i
-                                class="fa fa-user me-2"></i>Бастауыш</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>120 мин</small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">0 ₸</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Жазылу </a><i
-                                class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="https://cn.edurev.in/AllImages/original/ApplicationImages/CourseImages/8d9a9694-930a-486f-b66c-ae772d457610_CI.png" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
-                             class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1">Жалпы орыс тілі
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
-                            4.55</small>
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>5.2K+
-                            Оқырмандар
-                        </small>
-                        <small class="flex-fill text-center py-1 px-2"><i
-                                class="fa fa-user me-2"></i>Бастауыш</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 60 мин
-                        </small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">30000 ₸-ден</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
-                                href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWwIZDZ2g1oyf8nn2dZ4h640tTSiLzDsDng&s" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
-                             class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1">Балаларға арналған орыс тілі
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
-                            4.46</small>
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>76K+
-                            Оқырмандар
-                        </small>
-                        <small class="flex-fill text-center py-1 px-2"><i
-                                class="fa fa-user me-2"></i>Бастауыш</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 45/60 мин
-                        </small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">30000 ₸-ден</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
-                                href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="https://media-acs.zentech.gr/filesystem/images/20201210/low/ela4_15_12558.JPG" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
-                             class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1">Саяхатшыларға арналған ағылшын тілі
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
-                            4.12</small>
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>3.3К+
-                            Оқырмандар
-                        </small>
-                        <small class="flex-fill text-center py-1 px-2"><i
-                                class="fa fa-user me-2"></i>Орташа</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 60
-                            мин</small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">50000 ₸-ден</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
-                                href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="{% static 'img/course-5.jpg' %}" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
-                             class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1">Грамматика және жазу дағдылары
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-star text-warning me-2"></i>
-                            4.54</small>
-                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-user-graduate me-2"></i>1.3К+
-                            Оқырмандар
-                        </small>
-                        <small class="flex-fill text-center py-1 px-1"><i
-                                class="fa fa-user me-2"></i>Орташа</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>16 сағ</small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">5000 ₸-ден</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Сатып
-                            алу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="https://currentaffairs.adda247.com/wp-content/uploads/multisite/sites/5/2022/06/06070455/comms-blog-russian-language-day-2021-txt-2.jpg" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0bda51;"
-                             class="px-2 py-1 fw-bold text-uppercase">ТЕГІН
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1">Сөйлеу клубы және практика
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
-                            4.55</small>
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>3.5К+
-                            Оқырмандар
-                        </small>
-                        <small class="flex-fill text-center py-1 px-2"><i
-                                class="fa fa-user me-2"></i>Орташа</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>∞ сағ</small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">990₸-ден</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Кіру</a><i
-                                class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="https://i.pinimg.com/originals/7b/98/6e/7b986e33cf200e51434ed1c62109ff9a.jpg" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#ffcc00;"
-                             class="px-2 py-1 fw-bold text-uppercase">АҚЫЛЫ
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1">Шетел азаматтарына арналған орыс тілі
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
-                            4.53</small>
-                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>1К+
-                            Оқырман
-                        </small>
-                        <small class="flex-fill text-center py-1 px-2"><i
-                                class="fa fa-user me-2"></i>Бастауыш</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1 сабақ - 60
-                            мин</small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">50000₸-ден</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a
-                                href="#">Жазылу</a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item shadow">
-                    <div class="position-relative overflow-hidden text-light image">
-                        <img class="img-fluid" src="https://img.freepik.com/free-vector/hand-drawn-english-book-background_23-2149483336.jpg?semt=ais_hybrid&w=740" alt="">
-                        <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
-                             class="px-2 py-1 fw-bold text-uppercase">PAID
-                        </div>
-
-                    </div>
-                    <div class="p-2 pb-0">
-
-                        <h5 class="mb-1">Жұмысқа арналған орыс тілі
-                        </h5>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-star text-warning me-2"></i>
-                            4.64</small>
-                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-user-graduate me-2"></i>4.4L+
-                            Learners
-                        </small>
-                        <small class="flex-fill text-center py-1 px-1"><i
-                                class="fa fa-user me-2"></i>Intermediate</small>
-                    </div>
-                    <div class="d-flex">
-                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>3.5
-                            Hrs</small>
-                        <small class="py-1 px-2 fw-bold fs-6 text-center">50000₸-ден</small>
-                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
-                            Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-<div class="container text-center">
-    <a class="btn text-light py-3 px-5 mt-2 mb-5" href="{% url 'courses' %}">Барлық курстар</a>
-</div>
-<!-- Courses End -->
-
-<!-- FAQ Start  -->
-<div class="container-xxl py-5 category">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-
-            <h1 class="mb-5">Жиі қойылатын сұрақтар</h1>
-        </div>
-        <div class="row g-2">
-            <div class="col-12">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                TIL.KZ деген не ?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                             data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                TIL.KZ – бұл Қазақстандағы №1 авторлық әдістемеге негізделген орыс тілі курсы. Ол 10 жылдан бері жұмыс істейді және осы уақыт ішінде 100 000-нан астам студентті оқытқан.
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/c1.webp' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-75 d-flex align-items-center"
+                     style="background: rgba(35,42,89,0.7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #4682B4;">
+                                    №1 орыс тілін үйрету орталығы</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Орыс тілін небәрі 8 аптада
+                                    үйреніңіз</h1>
+                                <p class=" text-white mb-4 pb-2">Байқап көру сабағына қатысып көріңіз, ұнамаса ақшаңызды
+                                    қайтарып береміз!</p>
+                                <a href="{% url 'about' %}"
+                                   class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Толығырақ
+                                    білу</a>
+                                <a href="{% url 'signup' %}"
+                                   class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
+                                    сабақ</a>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Курстың бағалары қаншадан ?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                               TIL.KZ курстарының бағалары ашық түрде жарияланбайды, себебі оларды менеджерлер пробный сабақтан кейін жеке ұсынады.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                               TIL.KZ-дің пробный сабағы қалай өтеді?
-
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Пробный сабақ – бұл 990 тг тұратын алғашқы таныстыру сабағы, онда студент курстың қалай жұмыс істейтінін көріп, өз деңгейін анықтайды.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Курсқа қанша жастағылар қатыса алады?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                TIL.KZ-тін курстарына кез келген жастағы адамдар қатыса алады.
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-75 d-flex align-items-center"
+                     style="background: rgba(35,42,89,0.7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8">
+                                <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #4682B4;">TIL.KZ-ге
+                                    ҚОШ КЕЛДІҢІЗ!
+                                </h5>
+                                <h1 class="display-3 text-white animated slideInDown">Үйренбесеңіз ақшаңызды қайтарамыз!
+                                </h1>
+                                <p class=" text-white mb-4 pb-2">Алдымен біздің методиканы байқап көріңіз – ол үшін
+                                    тегін сынақ сабағына жазылыңыз!</p>
+                                <a href="{% url 'about' %}"
+                                   class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Толығырақ білу </a>
+                                <a href="{% url 'signup' %}"
+                                   class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
+                                    сабақ</a>
                             </div>
                         </div>
                     </div>
@@ -454,8 +59,199 @@
             </div>
         </div>
     </div>
-</div>
-<!-- FAQ End  -->
+    <!-- Carousel End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-2 text-center">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 style="color: #4682B4;"> TIL.KZ-пен өз болашағыңызға инвестиция жасаңыз
+                    </h1>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center shadow">
+                        <div class="p-2">
+                            <img src="{% static 'img/icon1.gif' %}" alt="" width="60px" class="mb-2">
+                            <h5 class="mb-3">Кез келген жас</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center shadow">
+                        <div class="p-2">
+                            <img src="{% static 'img/icon1.gif' %}" alt="" width="60px" class="mb-2">
+                            <h5 class="mb-3">Жылдам нәтиже</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center shadow">
+                        <div class="p-2">
+                            <img src="{% static 'img/icon3.gif' %}" alt="" width="60px" class="mb-2">
+                            <h5 class="mb-3">Тәжірибелі мұғалімдер</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center shadow">
+                        <div class="p-2">
+                            <img src="{% static 'img/icon4.gif' %}" alt="" width="60px" class="mb-2">
+                            <h5 class="mb-3">Нәтижеге кепілдік</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Banner-1 Start -->
+    <div class="container-xxl py-5 pt-5 bg-light">
+        <div class="container">
+            <div class="row g-5 ">
+                <div class="col-lg-6 p-5 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <h1 class="mb-4" style="color: #4682B4;">ТЕГІН ОҚУ МҮМКІНДІГІ!
+                    </h1>
+                    <p class="mb-4">Біз сізге қолжетімді білім беруді ұсынамыз, сондықтан алғашқы қадамды жасау үшін
+                        ешқандай төлем қажет емес.</p>
+
+                    <a class="btn text-light py-3 px-5 mt-2" href="{% url 'signup' %}">Тегін сабақтар</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner-1 End -->
+
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center px-3">Танымал курстар</h6>
+                <h1 class="mb-5" style="color: #4682B4;">Өзіңізге сай келетін орыс тілі курсын таңдаңыз</h1>
+            </div>
+            <div class="row g-4 py-2">
+                {% for course in courses %}
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="course-item shadow rounded">
+                            <div class="position-relative overflow-hidden image">
+                                <img class="img-fluid" src="{{ course.image_url }}" alt="{{ course.title }}">
+                                <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:{% if course.is_free %}#0bda51{% else %}#ffcc00{% endif %};"
+                                     class="px-2 py-1 fw-bold text-uppercase text-dark">
+                                    {% if course.is_free %}ТЕГІН{% else %}АҚЫЛЫ{% endif %}
+                                </div>
+                            </div>
+                            <div class="p-3 pb-2 bg-white">
+                                <h5 class="mb-2 fw-bold">
+                                    <a href="{% url 'course_detail' course.id %}"
+                                       class="text-dark text-decoration-none">
+                                        {{ course.title }}
+                                    </a>
+                                </h5>
+                                <div class="d-flex flex-wrap justify-content-between small text-muted">
+                                    <span><i class="fa fa-language me-1"></i>{{ course.language }}</span>
+                                    <span><i class="fa fa-clock me-1"></i>{{ course.duration }}</span>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-between small mt-2">
+                                    <span><i class="fa fa-star text-warning me-1"></i>{{ course.rating }}</span>
+                                    <a href="{% url 'course_detail' course.id %}" class="text-primary fw-bold">Кіру <i
+                                            class="fa fa-chevron-right me-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+    <div class="container text-center">
+        <a class="btn text-light py-3 px-5 mt-2 mb-5" href="{% url 'courses' %}">Барлық курстар</a>
+    </div>
+    <!-- Courses End -->
+
+    <!-- FAQ Start  -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+
+                <h1 class="mb-5">Жиі қойылатын сұрақтар</h1>
+            </div>
+            <div class="row g-2">
+                <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    TIL.KZ деген не ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    TIL.KZ – бұл Қазақстандағы №1 авторлық әдістемеге негізделген орыс тілі курсы. Ол 10
+                                    жылдан бері жұмыс істейді және осы уақыт ішінде 100 000-нан астам студентті оқытқан.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Курстың бағалары қаншадан ?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    TIL.KZ курстарының бағалары ашық түрде жарияланбайды, себебі оларды менеджерлер
+                                    пробный сабақтан кейін жеке ұсынады.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                    TIL.KZ-дің пробный сабағы қалай өтеді?
+
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Пробный сабақ – бұл 990 тг тұратын алғашқы таныстыру сабағы, онда студент курстың
+                                    қалай жұмыс істейтінін көріп, өз деңгейін анықтайды.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                    Курсқа қанша жастағылар қатыса алады?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    TIL.KZ-тін курстарына кез келген жастағы адамдар қатыса алады.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ End  -->
 {% endblock %}
 
 
