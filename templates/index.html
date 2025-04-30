@@ -20,9 +20,9 @@
                                 №1 орыс тілін үйрету орталығы</h5>
                             <h1 class="display-3 text-white animated slideInDown">Орыс тілін небәрі 8 аптада үйреніңіз</h1>
                             <p class=" text-white mb-4 pb-2">Байқап көру сабағына қатысып көріңіз, ұнамаса ақшаңызды қайтарып береміз!</p>
-                            <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Толығырақ
+                            <a href="{% url 'about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Толығырақ
                                 білу</a>
-                            <a href="signup.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
+                            <a href="{% url 'signup' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
                                 сабақ</a>
                         </div>
                     </div>
@@ -42,9 +42,9 @@
                             <h1 class="display-3 text-white animated slideInDown">Үйренбесеңіз ақшаңызды қайтарамыз!
                             </h1>
                             <p class=" text-white mb-4 pb-2">Алдымен біздің методиканы байқап көріңіз – ол үшін тегін сынақ сабағына жазылыңыз!</p>
-                            <a href="about.html"
+                            <a href="{% url 'about' %}"
                                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Толығырақ білу </a>
-                            <a href="signup.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
+                            <a href="{% url 'signup' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Пробный
                                 сабақ</a>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                 <p class="mb-4">Біз сізге қолжетімді білім беруді ұсынамыз, сондықтан алғашқы қадамды жасау үшін
                     ешқандай төлем қажет емес.</p>
 
-                <a class="btn text-light py-3 px-5 mt-2" href="signup.html">Тегін сабақтар</a>
+                <a class="btn text-light py-3 px-5 mt-2" href="{% url 'signup' %}">Тегін сабақтар</a>
             </div>
         </div>
     </div>
@@ -140,7 +140,7 @@
                     </div>
                     <div class="p-2 pb-0">
 
-                        <h5 class="mb-1"><a href="single.html" class="text-dark">Бастауыштарға арналған орыс тілі</a>
+                        <h5 class="mb-1"><a href="{% url 'single' %}" class="text-dark">Бастауыштарға арналған орыс тілі</a>
                         </h5>
                     </div>
                     <div class="d-flex">
@@ -383,7 +383,7 @@
     </div>
 </div>
 <div class="container text-center">
-    <a class="btn text-light py-3 px-5 mt-2 mb-5" href="courses.html">Барлық курстар</a>
+    <a class="btn text-light py-3 px-5 mt-2 mb-5" href="{% url 'courses' %}">Барлық курстар</a>
 </div>
 <!-- Courses End -->
 
