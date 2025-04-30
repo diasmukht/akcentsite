@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from .views import profile_view, upgrade_view
+
 # from .views import migrate_now
 urlpatterns = [
     path('', views.index, name='index'),
@@ -9,7 +11,8 @@ urlpatterns = [
     path('instructor/', views.instructor, name='instructor'),
     path('login/', views.login_view, name='login'),
     path('signup/', views.signup_view, name='signup'),  # ✅ правильно
-
+    path('profile/', profile_view, name='profile'),
+    path('upgrade/', upgrade_view, name='upgrade'),
     path('team/', views.team, name='team'),
     path('testimonial/', views.testimonial, name='testimonial'),
     path('single/', views.single, name='single'),

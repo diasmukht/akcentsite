@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container text-center py-5">
+        <h1 class="display-4 text-white">Купить подписку</h1>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4" style="max-width: 600px; margin: 0 auto;">
+        <h3 class="text-center mb-4">Выберите тариф</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="new_status" id="regular" value="regular" checked>
+                <label class="form-check-label" for="regular">
+                    Обычный — <strong>Бесплатно</strong>
+                </label>
+            </div>
+
+            <div class="form-check mb-4">
+                <input class="form-check-input" type="radio" name="new_status" id="advanced" value="advanced">
+                <label class="form-check-label" for="advanced">
+                    Продвинутый — <strong>12990₸ / мес</strong>
+                </label>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success px-5">Сохранить</button>
+                <a href="{% url 'profile' %}" class="btn btn-outline-secondary ms-3">Отмена</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

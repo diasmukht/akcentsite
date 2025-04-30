@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Header -->
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container text-center py-5">
+        <h1 class="display-4 text-white">Профиль</h1>
+    </div>
+</div>
+
+<!-- Профиль -->
+<div class="container mt-5">
+    <div class="card shadow-lg p-4" style="max-width: 600px; margin: 0 auto;">
+        <h3 class="text-center mb-4">👤 Аккаунт мәліметтері</h3>
+
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Статус:</strong>
+            {% if user.status == "regular" %}
+                <span class="badge bg-secondary">Обычный</span>
+            {% elif user.status == "advanced" %}
+                <span class="badge bg-warning text-dark">Продвинутый</span>
+            {% endif %}
+        </p>
+
+        <p><strong>Дата регистрации:</strong> {{ user.date_joined|date:"d.m.Y" }}</p>
+
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="{% url 'logout' %}" class="btn btn-outline-danger">Шығу</a>
+            <a href="{% url 'upgrade' %}" class="btn btn-primary">Купить подписку</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

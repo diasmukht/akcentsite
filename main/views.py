@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'index.html')
 
@@ -72,7 +73,19 @@ def logout_view(request):
 
 
 
+@login_required
+def profile_view(request):
+    return render(request, 'profile.html')
 
+@login_required
+def upgrade_view(request):
+    if request.method == 'POST':
+        status = request.POST.get('new_status')
+        if status in ['regular', 'advanced']:
+            request.user.status = status
+            request.user.save()
+            return redirect('profile')
+    return render(request, 'upgrade.html')
 
 
 
