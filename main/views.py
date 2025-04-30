@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 
-from .models import Course
+
 
 
 # from django.core.management import call_command
@@ -115,6 +115,12 @@ def course_detail(request, course_id):
     return render(request, 'course_locked.html', {'course': course})
 
 
+# views.py
+from .models import Course
+
+def courses_view(request):
+    courses = Course.objects.all()
+    return render(request, 'courses.html', {'courses': courses})
 
 
 
