@@ -11,10 +11,11 @@ from .forms import CustomUserCreationForm
 
 
 def index(request):
-    courses = Course.objects.all()[:4]  # или отфильтруй .filter(is_free=True) если нужно
+    courses = Course.objects.all()[:5]  # или отфильтруй .filter(is_free=True) если нужно
     return render(request, 'index.html', {'courses': courses})
 
-
+def lesson_detail1(request):
+    return render(request, 'lesson_detail1.html')
 
 
 

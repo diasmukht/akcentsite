@@ -27,5 +27,6 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
 
     path('migrate-now/', migrate_now, name='migrate-now'),
+    path('lesson_detail1/', views.lesson_detail1, name='lesson_detail1'),
     # path('collectstatic_now/', collectstatic_now, name='collectstatic'),
 ]
